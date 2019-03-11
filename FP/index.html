@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WEBSITE</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    
+*{
+margin: 0;
+padding: 0;
+font-family: Century;
+}
+header {
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(image/a.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+ul {
+    float: left;
+    list-style-type: none;
+    margin-top: 25px;
+}
+ul li {
+    display: inline-block;
+}
+ul li a {
+    text-decoration: none;
+    color:white;
+    padding: 5px 20px;
+    border: 1px  solid transparent;
+    transition: 0.6s ease;
+}
+ul li  a:hover {
+    background-color: black;
+    color: peachpuff;
+}
+ul li.active a {
+    background-color: black;
+    color: peachpuff;
+}
+main  {
+    max-width: 1200px;
+    margin: auto;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:17px;
+    line-height:1.6;
+}
+.button{
+    font-family: century;
+    background:darkcyan;
+    padding:1em 2em;
+    color:white;
+    border:2px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 60px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+.button:hover{
+    background:lightseagreen;
+}
+
+.modal{
+    display:none;
+    position: fixed;
+    z-index:1;
+    left: 0;
+    top:0;
+    height: 100%;
+    width:100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+.modal-content{
+    background-color:white;
+    margin: 20% auto;
+    width:70%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+    animation-name:modalopen;
+    animation-duration:1s;
+}
+.modal-header h2, .modal-footer h5{
+    margin:0;
+}
+
+
+.modal-header{
+    background:darkcyan;
+    padding:15px;
+    color:white;
+    text-align: center;
+    font-family: century;
+}
+.modal-body{
+    padding:10px 20px;
+}
+.modal-footer{
+    background:darkcyan;
+    padding:10px;
+    color:white;
+    text-align: left;
+}
+.closeBtn{
+    color:whitesmoke;
+    float: right;
+    font-size:30px;
+    color:whitesmoke;
+}
+.closeBtn:hover,.closeBtn:focus{
+    color:black;
+    text-decoration: none;
+    cursor:pointer;
+}
+@keyframes modalopen{
+    from{ opacity: 0}
+    to {opacity: 1}
+}
+</style>
+
+<body>
+        <header>
+                <!--3 pages-->
+                <div class="main">
+                    <ul>
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </header>
+    <!--modal-->
+    <button id="modalBtn" class="button"><blink>TRAVELLING</blink></button>
+    <div id="simpleModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="closeBtn">&times;</span>
+                <h2>WELCOME TO MY WEBSITE</h2>
+            </div>
+            <div class="modal-body">
+                <p>Welcome...</p>
+                <p>Travel is fatal to prejudice, bigotry, and norrow-mindedness. -Mark Twain</p>
+            </div>
+            <div class="modal-footer">
+                <h5>@elinwdswr</h5>
+            </div>
+        </div>
+    </div>
+
+    <script src="modal.js"></script>    
+    <script>
+    var modal = document.getElementById('simpleModal');
+    var modalBtn = document.getElementById('modalBtn');
+    var closeBtn = document.getElementsByClassName('closeBtn')[0];
+    modalBtn.addEventListener('click', openModal);
+    closeBtn.addEventListener('click', closeModal);
+    window.addEventListener('click', outsideClick);
+
+    function openModal(){
+        modal.style.display = 'block';
+        }
+    function closeModal(){
+        modal.style.display = 'none';
+        }
+    function outsideClick(e){
+        if(e.target == modal){
+            modal.style.display = 'none';
+            }
+        }
+    </script>
+
+    <!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  <!-- Project Section -->
+  <div class="w3-container w3-padding-32" id="projects">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">PLACES</h3>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Indonesian</div>
+        <img src="image/Indonesian.jpg" alt="House" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Korean</div>
+        <img src="image/korean.jpg" alt="House" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Thailand</div>
+        <img src="image/Thailand.jpg" alt="House" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Japan</div>
+        <img src="image/jepang.jpg" alt="House" style="width:100%">
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Filipina</div>
+        <img src="image/filipina.jpg" alt="House" style="width:99%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Malaysia</div>
+        <img src="image/malaysia.jpg" alt="House" style="width:99%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Singapura</div>
+        <img src="image/singapura.jpg" alt="House" style="width:99%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Taiwan</div>
+        <img src="image/taiwan.jpg" alt="House" style="width:99%">
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
+    <p>One of the most things about travel is the fact that every day is different. there are no routines, no set rules, or no expectations. 
+    You can do what you want, whenever you please. We're have been travelling the world together with our team for over two and half years now and one of the things we love the most is the freedom that travel and this lifestyle gives us. 
+    Travel breaks down routins, monotony and brings back some adventure, excitement, and exploration to people's lives.
+    </p>
+  </div>
+
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="/w3images/team2.jpg" alt="El" style="width:100%">
+      <h3>Elin Widaswara</h3>
+      <p class="w3-opacity">CEO & Founder</p>
+      <p>The gladdest moment in human life, me thinks, is a depature into unknown lands -SRB</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="/w3images/team1.jpg" alt="An" style="width:100%">
+      <h3>Anita Marlia</h3>
+      <p class="w3-opacity">Architect</p>
+      <p>Be fearless in the pursuit of what sets your soul on fire and of what sets your soul on. -JL</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="/w3images/team3.jpg" alt="Er" style="width:100%">
+      <h3>Erisya Eka Pratiwi</h3>
+      <p class="w3-opacity">Architect</p>
+      <p>Travel makes one modest. You see what a tiny place you occupy in the world. -GF</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="/w3images/team4.jpg" alt="Ri" style="width:100%">
+      <h3>Riska Sari Simatupang</h3>
+      <p class="w3-opacity">Architect</p>
+      <p>Travelling! it leaves you speechless, then turns you into a storyteller and playing together. -IB</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+  </div>
+
+<!-- End page content -->
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p><a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">Elin Widaswara</a></p>
+</footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
